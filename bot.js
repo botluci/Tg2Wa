@@ -81,7 +81,7 @@ const Tg2Wa = new Scenes.WizardScene(
         try {
             ctx.wizard.state.mobile = await ctx.message.text;
             const { name, mobile } = await ctx.wizard.state;
-        if (!mobile.includes('+91') && !Number.isInteger(mobile)) {
+        if (!mobile.includes('+994') && !Number.isInteger(mobile)) {
             // if(isValidPhone(mobile)
             await ctx.reply(`Not an Indian Number Or\nInvalid Format\ne.g. +919876543210 `);
             return await ctx.scene.leave();}
@@ -148,7 +148,7 @@ bot.command('update', async (ctx) => {
         bot.on('message', async (ctx) => {
             const newNum = ctx.message.text
             try {
-                if (!newNum.includes('+91') && !Number.isInteger(newNum)) {
+                if (!newNum.includes('+994') && !Number.isInteger(newNum)) {
                 return await ctx.reply(`Not an Indian Number Or\nInvalid Format\ne.g. +919876543210 `);
             }
             else {
